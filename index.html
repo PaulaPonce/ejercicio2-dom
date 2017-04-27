@@ -5,7 +5,6 @@
 	<title>Mensaje por clase</title>
 </head>
 <body>
-	
 	<h1 class="titulo">Esto es un título</h1>
 	<p class="mensaje">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, perspiciatis commodi excepturi numquam delectus natus aspernatur alias, at consequatur perferendis dignissimos omnis. <a href="#">Soy un enlace</a></p>
 	<img src="http://lorempixel.com/output/nature-q-c-301-301-3.jpg" alt="" class="mensaje">
@@ -13,9 +12,27 @@
 	<span class="mensaje"></span>
 	<img src="http://lorempixel.com/output/city-q-c-301-301-9.jpg" alt="" class="mensaje">
 
+	<p>Número de clases:</p>
+	<span id="num_class"></span>
 
-	<script>
-		//Escribe aquí tu código Javascript
+	<script type="text/javascript">
+		function mensaje(){
+			var buscar = document.getElementsByClassName("mensaje").length;
+			var msj = document.getElementById("num_class");
+			msj.innerHTML = buscar;	
+
+			if(buscar == 1){
+				alert("Es muy poco");
+				msj.innerHTML = "Hay " + buscar + " clases: " + "Es muy poco";
+			}else if(buscar <= 3){
+				alert("No está mal");
+				msj.innerHTML = "Hay " + buscar + " clases: " + "No está mal";
+			}else if(buscar <= 5){
+				alert("Son demasiados");
+				msj.innerHTML = "Hay " + buscar + " clases: " + "Son demasiadas";
+			};
+		}
+		mensaje();
 	</script>
 </body>
 </html>
