@@ -15,24 +15,6 @@
 	<p>Número de clases:</p>
 	<span id="num_class"></span>
 
-	<script type="text/javascript">
-		function mensaje(){
-			var buscar = document.getElementsByClassName("mensaje").length;
-			var msj = document.getElementById("num_class");
-			msj.innerHTML = buscar;	
-
-			if(buscar == 1){
-				alert("Es muy poco");
-				msj.innerHTML = "Hay " + buscar + " clases: " + "Es muy poco";
-			}else if(buscar <= 3){
-				alert("No está mal");
-				msj.innerHTML = "Hay " + buscar + " clases: " + "No está mal";
-			}else if(buscar <= 5){
-				alert("Son demasiados");
-				msj.innerHTML = "Hay " + buscar + " clases: " + "Son demasiadas";
-			};
-		}
-		mensaje();
-	</script>
+	<script type="text/javascript" src="js/javascript.js"></script>
 </body>
 </html>
